@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Json.DesatteNoticia">
+    <ListView x:Name="list" SeparatorVisibility="Default" RowHeight="495" BackgroundColor="Silver" Margin="0">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ViewCell.View>
+                        <StackLayout Orientation="Vertical" VerticalOptions="Start" Spacing="0">
+                            <Image HorizontalOptions="FillAndExpand" HeightRequest="330" Aspect="AspectFill" Source="{Binding ImagenURL}"/>
+                            <Grid Grid.Row="0" RowSpacing="0" Padding="5,0,5,0" BackgroundColor="White">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="100" />
+                                </Grid.ColumnDefinitions>
+                            </Grid>
+                            <Label Grid.Column="0" Text="{Binding Titulo}}" />
+                            <Label Grid.Column="1" Text="{Binding Descripcion}}" />
+                            <Label Grid.Column="2" Text="{Binding contenido}}" />
+                        </StackLayout>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
